@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.1.2",
     "chromedriver": "^2.33.2",
     "mocha": "^4.0.1",
     "selenium-standalone": "^6.12.0",
