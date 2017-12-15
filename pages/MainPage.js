@@ -14,7 +14,7 @@ class MainPage extends Page {
         return super.open("https://www.onliner.by/");
     }
 
-    submit() {
+    goToMobilePage() {
         MainPage.mobileCatalog.click();
     }
 

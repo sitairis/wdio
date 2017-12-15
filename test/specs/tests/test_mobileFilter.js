@@ -7,11 +7,11 @@ describe("Test mobile filter", function() {
     it('should get list titles of phones', function () {
         let mainPage = new MainPage();
         mainPage.open();
-        mainPage.submit();
+        mainPage.goToMobilePage();
 
         let mobilePage = new MobilePage();
         mobilePage.open();
-        mobilePage.submit();
+        mobilePage.checkFirm();
         mobilePage.txbPriceTo.setValue('350');
 
         let result = mobilePage.getResultsTitles();

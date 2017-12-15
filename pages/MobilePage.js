@@ -18,17 +18,17 @@ class MobilePage extends Page {
         return browser.getTitle();
     }
 
-    submit() {
+    checkFirm() {
         this.chbFirm.click();
     }
 
     getResultsTitles() {
         let searchResults = [];
-        let i = 1;
+        let index = 1;
         try {
-            while (browser.element(`//div[@class='schema-product__group'][${i}]//div[@class='schema-product__title']//span`).isExisting()) {
-                searchResults.push(`${i} ${browser.element(`//div[@class='schema-product__group'][${i}]//div[@class='schema-product__title']//span`).getText()}`);
-                i++;
+            while (browser.element(`//div[@class='schema-product__group'][${index}]//div[@class='schema-product__title']//span`).isExisting()) {
+                searchResults.push(`${index} ${browser.element(`//div[@class='schema-product__group'][${index}]//div[@class='schema-product__title']//span`).getText()}`);
+                index++;
             }
         } catch (e) {
             console.log(`${e}`);
@@ -39,4 +39,3 @@ class MobilePage extends Page {
 }
 
 module.exports = MobilePage;
-// export default new MobilePage();

@@ -6,8 +6,9 @@ describe("Test opening mobile catalog", function() {
 
     it("should open mobile catalog", function () {
         let mainPage = new MainPage();
+
         mainPage.open();
-        mainPage.submit();
+        mainPage.goToMobilePage();
 
         let mobilePage = new MobilePage();
         mobilePage.open();

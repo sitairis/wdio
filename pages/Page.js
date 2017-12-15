@@ -12,4 +12,5 @@ class Page {
         return this._title;
     }
 }
+
 module.exports = Page;
