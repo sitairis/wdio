@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
-let MainPage = require('../../../pages/MainPage');
-let MobilePage = require('../../../pages/MobilePage');
+let MainPage = require('../pages/MainPage');
+let MobilePage = require('../pages/MobilePage');
 
 describe("Test opening mobile catalog", function() {
 
