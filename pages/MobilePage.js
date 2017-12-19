@@ -3,7 +3,7 @@ let Page = require('./Page');
 class MobilePage extends Page {
 
     constructor() {
-        super(MobilePage);
+        super("Mobile Page");
     }
 
     get chbFirm() {
@@ -25,9 +25,11 @@ class MobilePage extends Page {
     getResultsTitles() {
         let searchResults = [];
         let index = 1;
+        let element = browser.element(`//div[@class='schema-product__group'][1]//div[@class='schema-product__title']//span`);
         try {
-            while (browser.element(`//div[@class='schema-product__group'][${index}]//div[@class='schema-product__title']//span`).isExisting()) {
-                searchResults.push(`${index} ${browser.element(`//div[@class='schema-product__group'][${index}]//div[@class='schema-product__title']//span`).getText()}`);
+            while (element.isExisting()) {
+                element = browser.element(`//div[@class='schema-product__group'][${index}]//div[@class='schema-product__title']//span`).waitForVisible(1000);
+                searchResults.push(`${element.getText()}`);
                 index++;
             }
         } catch (e) {

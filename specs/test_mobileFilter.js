@@ -14,6 +14,8 @@ describe("Test mobile filter", function() {
         mobilePage.checkFirm();
         mobilePage.txbPriceTo.setValue('350');
 
+        browser.timeouts('implicit', 1000);
+
         let result = mobilePage.getResultsTitles();
 
         result.forEach((currentElement) => {

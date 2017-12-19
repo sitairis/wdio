@@ -2,8 +2,8 @@ let Page = require('./Page');
 
 class MainPage extends Page {
 
-    constructor(title) {
-        super(title);
+    constructor() {
+        super('Main Page');
     }
 
     static get mobileCatalog() {
@@ -17,7 +17,6 @@ class MainPage extends Page {
     goToMobilePage() {
         MainPage.mobileCatalog.click();
     }
-
 }
 
 module.exports = MainPage;

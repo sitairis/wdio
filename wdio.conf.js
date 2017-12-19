@@ -17,6 +17,14 @@ exports.config = {
     exclude: [
         // 'path/to/excluded/files'
     ],
+    suites: {
+        suite1: [
+            './specs/test_mobileFilter.js'
+        ],
+        suite2: [
+            './specs/test_openMobileCatalog.js'
+        ]
+    },
     //
     // ============
     // Capabilities
@@ -149,7 +157,7 @@ exports.config = {
     },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
-     * to manipulate configurations depending on the capability or spec.
+     * to manipulate configurationFs depending on the capability or spec.
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
