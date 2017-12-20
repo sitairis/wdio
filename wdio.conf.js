@@ -25,7 +25,10 @@ exports.config = {
             './specs/test_openMobileCatalog.js'
         ],
         suite3: [
-            './specs/test_navigateMenu/*.js'
+            './specs/navigateMenu/*.js'
+        ],
+        suite4: [
+            './specs/searchLine/*.js'
         ]
     },
     //
@@ -64,9 +67,9 @@ exports.config = {
         // {
             maxInstances: 5,
             browserName: 'chrome',
-            chromeOptions: {
-                args: ['headless', 'disable-gpu'],
-            }
+            // chromeOptions: {
+            //     args: ['headless', 'disable-gpu'],
+            // }
         }
     ],
     //

@@ -22,7 +22,6 @@ class MainPage extends Page {
         this.mobileCatalog.click();
     }
 
-
 }
 
 module.exports = MainPage;
