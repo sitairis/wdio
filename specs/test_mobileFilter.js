@@ -10,7 +10,6 @@ describe("Test mobile filter", function() {
         mainPage.goToMobilePage();
 
         let mobilePage = new MobilePage();
-        mobilePage.open();
         mobilePage.checkFirm();
         mobilePage.txbPriceTo.setValue('350');
 

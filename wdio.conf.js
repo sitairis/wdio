@@ -1,6 +1,6 @@
 exports.config = {
-    // port: '9515',
-    // path: '/',
+    port: '9515',
+    path: '/',
     //
     // ==================
     // Specify Test Files
@@ -23,6 +23,9 @@ exports.config = {
         ],
         suite2: [
             './specs/test_openMobileCatalog.js'
+        ],
+        suite3: [
+            './specs/test_navigateMenu/*.js'
         ]
     },
     //
@@ -41,20 +44,31 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    // maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'firefox'
-    }],
+    capabilities: [
+        {
+            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+            // grid with only 5 firefox instances available you can make sure that not more than
+            // 5 instances get started at a time.
+            // maxInstances: 5,
+            // browserName: 'firefox',
+            // firefoxOptions: {
+            //     args: ['headless', 'disable-gpu'],
+            // }
+        // },
+        // {
+            maxInstances: 5,
+            browserName: 'chrome',
+            chromeOptions: {
+                args: ['headless', 'disable-gpu'],
+            }
+        }
+    ],
     //
     // ===================
     // Test Configurations
@@ -120,7 +134,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: ['chromedriver'],
+    services: ['chromedriver'],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: http://webdriver.io/guide/testrunner/frameworks.html
@@ -179,7 +193,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-    
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -209,7 +223,7 @@ exports.config = {
      * @param {Object} test test details
      */
     // afterTest: function (test) {
-        // browser.close();
+    // browser.close();
     // },
     /**
      * Hook that gets executed after the suite has ended
@@ -217,7 +231,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
@@ -250,6 +264,6 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onComplete: function(exitCode, config, capabilities) {
+    onComplete: function (exitCode, config, capabilities) {
     }
 };
