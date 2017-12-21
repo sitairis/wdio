@@ -1,4 +1,4 @@
-let Page = require('./Page');
+let Page = require('../Page');
 
 class ServicesPage extends Page {
 

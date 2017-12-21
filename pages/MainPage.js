@@ -4,6 +4,7 @@ class MainPage extends Page {
 
     constructor() {
         super('Main Page');
+        // this.topActions = browser.getElementsByClassName(`b-top-actions`);
     }
 
      get mobileCatalog() {
@@ -22,6 +23,9 @@ class MainPage extends Page {
         this.mobileCatalog.click();
     }
 
+    // auth() {
+    //     browser.element(`//div[.='Вход ']`).click();
+    // }
 }
 
 module.exports = MainPage;

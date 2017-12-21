@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let MainPage = require('../../pages/MainPage');
-let HouseFlatPage = require('../../pages/HouseFlatPage');
+let HouseFlatPage = require('../../pages/navigateMenu/HouseFlatPage');
 
 describe("Test opening houses and flats page", function() {
 

@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let MainPage = require('../../pages/MainPage');
-let ForumPage = require('../../pages/ForumPage');
+let ForumPage = require('../../pages/navigateMenu/ForumPage');
 
 describe("Test opening forum page", function() {
 

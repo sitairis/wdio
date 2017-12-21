@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let MainPage = require('../../pages/MainPage');
-let CatalogPage = require('../../pages/CatalogPage');
+let CatalogPage = require('../../pages/navigateMenu/CatalogPage');
 
 describe("Test opening catalog page", function() {
 

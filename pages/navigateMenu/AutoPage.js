@@ -1,4 +1,4 @@
-let Page = require('./Page');
+let Page = require('../Page');
 
 class AutoPage extends Page {
 
@@ -9,6 +9,7 @@ class AutoPage extends Page {
     get title(){
         return browser.getTitle();
     }
+
 
 }
 

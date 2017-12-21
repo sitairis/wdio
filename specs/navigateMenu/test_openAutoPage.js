@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let MainPage = require('../../pages/MainPage');
-let AutoPage = require('../../pages/AutoPage');
+let AutoPage = require('../../pages/navigateMenu/AutoPage');
 
 describe("Test opening auto page", function() {
 
