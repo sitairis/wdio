@@ -28,7 +28,10 @@ exports.config = {
             './specs/navigateMenu/*.js'
         ],
         suite4: [
-            './specs/searchLine/*.js'
+            './specs/search/*.js'
+        ],
+        suite5: [
+            './specs/userBar/*.js'
         ]
     },
     //
