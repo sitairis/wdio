@@ -7,7 +7,8 @@ class MobilePage extends Page {
     }
 
     get chbFirm() {
-        return browser.element("//input[@value='xiaomi']/following-sibling::span");
+    // browser.waitForVisible();
+         return $(``);
     }
 
     get txbPriceTo() {

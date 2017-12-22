@@ -4,7 +4,6 @@ class MainPage extends Page {
 
     constructor() {
         super('Main Page');
-        // this.topActions = browser.getElementsByClassName(`b-top-actions`);
     }
 
     get mobileCatalog() {
@@ -30,8 +29,8 @@ class MainPage extends Page {
 
     openSearchForm() {
         browser.setValue("input.fast-search__input", 'Xiaomi');
-        browser.timeouts('implicit', 5000);
-        browser.waitForExist('iframe.modal-iframe');
+        browser.timeouts('implicit', 1000);
+        // browser.waitForExist('iframe.modal-iframe');
         let my_frame = $('iframe.modal-iframe').value;
         browser.frame(my_frame);
     }

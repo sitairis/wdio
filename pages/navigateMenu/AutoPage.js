@@ -10,7 +10,6 @@ class AutoPage extends Page {
         return browser.getTitle();
     }
 
-
 }
 
 module.exports = AutoPage;

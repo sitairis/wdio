@@ -7,6 +7,7 @@ class ServicesPage extends Page {
     }
 
     get title(){
+        browser.timeouts('implicit', 1000);
         return browser.getTitle();
     }
 
