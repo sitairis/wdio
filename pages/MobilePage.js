@@ -7,8 +7,8 @@ class MobilePage extends Page {
     }
 
     get chbFirm() {
-    // browser.waitForVisible();
-         return $(``);
+         return browser.element(`//div[2][@class='schema-filter__facet']//ul[@class='schema-filter__list']//span[.='Xiaomi']/../span[@class='i-checkbox']/span`);
+   //кошмар исправить!!!!!!!!
     }
 
     get txbPriceTo() {
@@ -39,6 +39,7 @@ class MobilePage extends Page {
 
         return searchResults;
     }
+
 }
 
 module.exports = MobilePage;
