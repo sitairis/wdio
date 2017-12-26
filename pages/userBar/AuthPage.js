@@ -13,11 +13,11 @@ class AuthPage extends Page {
         browser.switchTab(curTabId);
     }
 
-    get registBtn() {
+    get registrationButton() {
         return browser.element('div.auth-box__switcher-item + div');
     }
-    get textRegistrButton() {
-        return this.registBtn.getText();
+    get textRegistrationButton() {
+        return this.registrationButton.getText();
     }
 }
 
