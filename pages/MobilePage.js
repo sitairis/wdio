@@ -7,8 +7,7 @@ class MobilePage extends Page {
     }
 
     get chbFirm() {
-         return browser.element(`//div[2][@class='schema-filter__facet']//ul[@class='schema-filter__list']//span[.='Xiaomi']/../span[@class='i-checkbox']/span`);
-   //кошмар исправить!!!!!!!!
+        return browser.element(`//div[2][@class='schema-filter__facet']//ul[@class='schema-filter__list']//span[.='Xiaomi']/../../label`);
     }
 
     get txbPriceTo() {

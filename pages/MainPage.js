@@ -22,15 +22,23 @@ class MainPage extends Page {
         this.mobileCatalog.click();
     }
 
-    auth() {
-        return browser.element(`//div[@id='userbar']/div/div`).click();
+    get authorization(){
+        return browser.element(`//div[@id='userbar']/div/div`);
     }
 
+    auth() {
+        return this.authorization.click();
+    }
+
+    set searchLine(value) {
+        browser.setValue("input.fast-search__input", value);
+    }
 
     openSearchForm() {
-        browser.setValue("input.fast-search__input", 'Xiaomi');
+        this.searchLine = 'Xiaomi';
+
         browser.timeouts('implicit', 1000);
-        // browser.waitForExist('iframe.modal-iframe');
+
         let my_frame = $('iframe.modal-iframe').value;
         browser.frame(my_frame);
     }

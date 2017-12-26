@@ -8,12 +8,16 @@ class AuthPage extends Page {
 
     openAuthPage() {
         browser.timeouts('implicit', 3000);
+
         let curTabId = browser.getCurrentTabId();
         browser.switchTab(curTabId);
     }
 
+    get registBtn() {
+        return browser.element('div.auth-box__switcher-item + div');
+    }
     get textRegistrButton() {
-        return browser.element('div.auth-box__switcher-item + div').getText();
+        return this.registBtn.getText();
     }
 }
 
