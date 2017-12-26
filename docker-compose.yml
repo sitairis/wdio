@@ -1,0 +1,4 @@
+wdio:
+  image: 375docker9/wdio
+  ports:
+    - "4444:4444"
