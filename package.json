@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/webdriverio/bin/wdio ./wdio.conf.js --suite suite1,suite2,suite3,suite4,suite5"
   },
   "author": "",
   "license": "ISC",
