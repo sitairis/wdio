@@ -22,25 +22,29 @@ class MainPage extends Page {
         this.mobileCatalog.click();
     }
 
-    get authorization(){
+    get btnAuthorization(){
         return browser.element(`//div[@id='userbar']/div/div`);
     }
 
-    auth() {
-        return this.authorization.click();
+    clickBtnAauth() {
+        return this.btnAuthorization.click();
     }
 
-    set searchLine(value) {
-        browser.setValue("input.fast-search__input", value);
+    get txbSearch() {
+        return $("input.fast-search__input");
     }
 
-    openSearchForm() {
-        this.searchLine = 'Xiaomi';
+    typeSearch(value) {
+        this.txbSearch.setValue(value);
+    }
 
-        browser.timeouts('implicit', 1000);
+    prepareFirstSearch(value) {
+        this.typeSearch(value);
 
         let my_frame = $('iframe.modal-iframe').value;
         browser.frame(my_frame);
+
+        browser.waitForExist(`div.product__title`);
     }
 
 }

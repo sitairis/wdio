@@ -8,7 +8,7 @@ describe("Test search line", function() {
     it('should find something', function () {
         let mainPage = new MainPage();
         mainPage.open();
-        mainPage.openSearchForm();
+        mainPage.prepareFirstSearch(`Xiaomi`);
 
         let searchForm = new SearchForm();
 

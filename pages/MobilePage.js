@@ -6,9 +6,9 @@ class MobilePage extends Page {
         super("Mobile Page");
     }
 
-    get chbFirm() {
-        return browser.element(`//div[2][@class='schema-filter__facet']//ul[@class='schema-filter__list']//span[.='Xiaomi']/../../label`);
-    }
+    // get chbFirm() {
+    //     return browser.element(`//div[2][@class='schema-filter__facet']//ul[@class='schema-filter__list']//span[.='Xiaomi']/../../label`);
+    // }
 
     get txbPriceTo() {
         return browser.element("//input[@placeholder = 'до']");
@@ -18,9 +18,9 @@ class MobilePage extends Page {
         return browser.getTitle();
     }
 
-    checkFirm() {
-        this.chbFirm.click();
-    }
+    // checkFirm() {
+    //     this.chbFirm.click();
+    // }
 
     getResultsTitles() {
         let searchResults = [];

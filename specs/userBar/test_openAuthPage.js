@@ -6,11 +6,11 @@ describe("Test opening auth page", function() {
     it('should get text button', function () {
         let mainPage = new MainPage();
         mainPage.open();
-        mainPage.auth();
+        mainPage.clickBtnAauth();
 
         let authPage = new AuthPage();
         authPage.openAuthPage();
-        let result = authPage.textRegistrButton;
+        let result = authPage.textBtnRegistration;
 
         expect(result).to.equal('Регистрация');
     });

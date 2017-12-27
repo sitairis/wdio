@@ -1,4 +1,5 @@
 class Page {
+
     constructor(title) {
         this._title = title;
     }

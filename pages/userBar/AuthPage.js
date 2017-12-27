@@ -13,11 +13,35 @@ class AuthPage extends Page {
         browser.switchTab(curTabId);
     }
 
-    get registrationButton() {
+    get btnRegistration() {
         return browser.element('div.auth-box__switcher-item + div');
     }
-    get textRegistrationButton() {
-        return this.registrationButton.getText();
+    get textBtnRegistration() {
+        return this.btnRegistration.getText();
+    }
+
+    get txbLogin() {
+        return $("input[placeholder='Ник или e-mail']");
+    }
+
+    set txbLogin(value) {
+        this.txbLogin.setValue(value);
+    }
+
+    get txbPassword() {
+        return $("input[placeholder='Пароль']");
+    }
+
+    set txbPassword(value) {
+        this.txbPassword.setValue(value);
+    }
+
+    get linkForget() {
+        return $(`[href="https://profile.onliner.by/login/lost"]`);
+    }
+
+    remind() {
+        this.linkForget.click();
     }
 }
 

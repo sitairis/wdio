@@ -7,7 +7,7 @@ class ServicesPage extends Page {
     }
 
     get title(){
-        browser.timeouts('implicit', 1000);
+        browser.waitForExist(`[href='https://people.onliner.by/2017/03/22/kak-nachat-biznes-v-rb']`);
         return browser.getTitle();
     }
 

@@ -1,0 +1,7 @@
+
+.idea/
+errorShots/
+node_modules/
+package-lock.json
+comand
+/debug.log

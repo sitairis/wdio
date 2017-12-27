@@ -1,6 +1,7 @@
 let expect = require('chai').expect;
-let MainPage = require('../pages/MainPage');
-let MobilePage = require('../pages/MobilePage');
+let MainPage = require('../../pages/MainPage');
+let MobilePage = require('../../pages/MobilePage');
+let FilterPanel = require(`../../pages/filters/FilterPanel`);
 
 describe("Test mobile filter", function() {
 
@@ -10,15 +11,18 @@ describe("Test mobile filter", function() {
         mainPage.goToMobilePage();
 
         let mobilePage = new MobilePage();
-        mobilePage.checkFirm();
-        mobilePage.txbPriceTo.setValue('350');
+
+        let filter = new FilterPanel();
+        filter.setCheckboxFilter(`Производитель`, `Xiaomi`, `Apple`);
+        // mobilePage.checkFirm();
+        // mobilePage.txbPriceTo.setValue('350');
 
         browser.timeouts('implicit', 1000);
 
         let result = mobilePage.getResultsTitles();
 
         result.forEach((currentElement) => {
-            expect(currentElement).to.contain('Xiaomi');
+            expect(result).to.contain(`Xiaomi`);
         });
     });
 });

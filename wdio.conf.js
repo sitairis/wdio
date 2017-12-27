@@ -11,7 +11,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './specs/*.js'
+        './specs/*/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -19,20 +19,17 @@ exports.config = {
     ],
     suites: {
         suite1: [
-            './specs/test_mobileFilter.js'
-        ],
-        suite2: [
-            './specs/test_openMobileCatalog.js'
-        ],
-        suite3: [
-            './specs/navigateMenu/*.js'
-        ],
-        suite4: [
-            './specs/search/*.js'
-        ],
-        suite5: [
-            './specs/userBar/*.js'
+            './specs/catalogMobile/*.js'
         ]
+        // suite2: [
+        //     './specs/navigateMenu/*.js'
+        // ],
+        // suite3: [
+        //     './specs/search/*.js'
+        // ],
+        // suite4: [
+        //     './specs/userBar/*.js'
+        // ]
     },
     //
     // ============
